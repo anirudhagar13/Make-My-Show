@@ -1,0 +1,23 @@
+Queries-
+
+-SELECT `movie_name` AS 'Movie Name', `Viewer count` FROM (SELECT count(`cust_id`) AS 'Viewer count', `movie_id` FROM `booking` NATURAL JOIN `screen` GROUP BY `movie_id`) AS T NATURAL JOIN `movie`;
+
+-SELECT `cust_name` FROM `customer` WHERE `cust_id` IN (SELECT `cust_id` FROM `booking` NATURAL JOIN `screen` WHERE `movie_id` IN (SELECT `movie_id` FROM `movie` WHERE `movie_name` = 'Snatch'));
+
+-SELECT `cust_name`, `cust_email`, `cust_phone_no`, `theater_id`, `screen_no`, `date_time`, `quantity` FROM (SELECT * FROM `booking` NATURAL JOIN `screen` WHERE `movie_id` IN (SELECT `movie_id` FROM `movie` WHERE `movie_name` = 'PK')) AS T NATURAL JOIN `customer`;
+
+-SELECT `movie_name` FROM `movie` WHERE `movie_id` IN (SELECT `movie_id` FROM `screen` WHERE `theater_id` IN (SELECT `theater_id` FROM `theater` WHERE `theater_name` = 'INOX'));
+
+-SELECT `cust_name`, `cust_email`, `cust_phone_no` FROM `customer` WHERE `cust_id` IN (SELECT `cust_id` FROM (SELECT * FROM `screen` WHERE `theater_id` IN (SELECT `theater_id` FROM `theater` WHERE `theater_name` = 'INOX')) AS T NATURAL JOIN `booking`);
+
+
+
+
+
+Search when movie name is given –
+
+Select  cust_name,cust_email from (select cust_id from (select theater_id,screen_no from movie natural join screen where movie_name = "Badlapur" ) as t1 natural join booking )as t2 natural join customer ;
+
+Search when theatre is given -
+
+Select  cust_name,cust_email from(select cust_id from theater natural join booking where theater_name = "INOX") as t1 natural join customer ;
