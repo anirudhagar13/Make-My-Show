@@ -61,7 +61,7 @@ public class search extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 102));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\ABC\\Desktop\\movie1\\src\\hehe\\Bookmyshow.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hehe/Bookmyshow.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
 
         jLabel1.setFont(new java.awt.Font("Kristen ITC", 1, 24)); // NOI18N
@@ -126,9 +126,9 @@ public class search extends javax.swing.JFrame {
                         .addGap(0, 0, 0)
                         .addComponent(mid))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addGap(26, 26, 26)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(submit, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,7 +148,7 @@ public class search extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
+                                .addContainerGap()
                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -161,10 +161,10 @@ public class search extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(0, 159, Short.MAX_VALUE))
+                .addGap(0, 183, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 530));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -178,7 +178,7 @@ public class search extends javax.swing.JFrame {
         DefaultTableModel model=(DefaultTableModel)t1.getModel();
        try{
            Class.forName("java.sql.Driver");
-           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","anirudh","anirudh");
+           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","root","");
            Statement st=conn.createStatement();
            Statement st1=conn.createStatement();
            String query="select cust_name,cust_email,cust_phone_no from customer where cust_id='"+movie+"';";

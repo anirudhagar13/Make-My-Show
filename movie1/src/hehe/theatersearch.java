@@ -160,13 +160,14 @@ public class theatersearch extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(84, 84, 84)
-                                        .addComponent(jLabel2))
+                                        .addComponent(jLabel2)
+                                        .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel3)
                                         .addGap(18, 18, 18)
-                                        .addComponent(mid, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(41, Short.MAX_VALUE))
+                                        .addComponent(mid, 0, 189, Short.MAX_VALUE)))
+                                .addContainerGap())
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -227,7 +228,7 @@ public class theatersearch extends javax.swing.JFrame {
         DefaultTableModel model=(DefaultTableModel)t1.getModel();
        try{
            Class.forName("java.sql.Driver");
-           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","anirudh","anirudh");
+           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","root","");
            Statement st=conn.createStatement();
            String query = "SELECT `movie_name` FROM `movie` WHERE `movie_id` IN (SELECT `movie_id` FROM `screen` WHERE `theater_id` IN (SELECT `theater_id` FROM `theater` WHERE `theater_name` = '"+movie+"'));";
            ResultSet rs=st.executeQuery(query);

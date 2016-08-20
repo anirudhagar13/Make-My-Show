@@ -156,7 +156,7 @@ public class boxoffice extends javax.swing.JFrame {
         DefaultTableModel model=(DefaultTableModel)t1.getModel();
        try{
            Class.forName("java.sql.Driver");
-           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","anirudh","anirudh");
+           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","root","");
            Statement st=conn.createStatement();
            Statement st1=conn.createStatement();
           // String query="select cust_name,cust_email,cust_phone_no from customer where cust_id='"+movie+"';";

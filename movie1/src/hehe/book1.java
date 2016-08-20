@@ -62,23 +62,23 @@ public class book1 extends javax.swing.JFrame {
                 movieActionPerformed(evt);
             }
         });
-        jPanel1.add(movie, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 260, 160, 30));
+        jPanel1.add(movie, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, 160, 30));
 
         refresh.setBackground(new java.awt.Color(153, 153, 255));
         refresh.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         refresh.setForeground(new java.awt.Color(0, 0, 102));
         refresh.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "         --------", "Samosa", "Coke", "Butter Popcorn", "Nachos", "Tea/Coffee" }));
-        jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 120, 30));
+        jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 120, 30));
 
         jLabel1.setFont(new java.awt.Font("Andy", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 0));
         jLabel1.setText("Movie -");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 250, 120, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 170, -1));
 
         jLabel3.setFont(new java.awt.Font("Andy", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 153, 0));
         jLabel3.setText("Date -");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Andy", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 153, 0));
@@ -88,7 +88,7 @@ public class book1 extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Andy", 1, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 102, 0));
         jLabel5.setText("Quantity -");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 460, -1, -1));
 
         submit.setBackground(new java.awt.Color(153, 153, 255));
         submit.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
@@ -99,22 +99,20 @@ public class book1 extends javax.swing.JFrame {
                 submitActionPerformed(evt);
             }
         });
-        jPanel1.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 550, -1, -1));
+        jPanel1.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 550, 140, 50));
 
         date.setBackground(new java.awt.Color(153, 153, 255));
         date.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         date.setForeground(new java.awt.Color(0, 0, 102));
         date.setText("YYYY/MM/DD");
-        jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 400, 120, 30));
+        jPanel1.add(date, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 120, 30));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\ABC\\Desktop\\movie1\\src\\hehe\\Bookmyshow.jpg")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hehe/Bookmyshow.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, 470, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\ABC\\Desktop\\movie1\\src\\hehe\\Guardians-of-the-Galaxy-2-1308x1940.jpg")); // NOI18N
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 470, -1));
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, -40, 450, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\ABC\\Desktop\\movie1\\src\\hehe\\Yo.jpg")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hehe/Yo.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 250, 630));
 
@@ -122,7 +120,7 @@ public class book1 extends javax.swing.JFrame {
         quantity.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         quantity.setForeground(new java.awt.Color(0, 0, 102));
         quantity.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "    -----", "   1", "   2", "   3", "   4", "   5", "   6" }));
-        jPanel1.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, 80, 30));
+        jPanel1.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, 80, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 630));
 
@@ -157,7 +155,7 @@ public class book1 extends javax.swing.JFrame {
        else{
         try{
            Class.forName("java.sql.Driver");
-           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","anirudh","anirudh");
+           Connection conn=(Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/pmoviebook","root","");
            Statement st=conn.createStatement();
            Statement st1=conn.createStatement();
            String query4="select booking_id from booking";
